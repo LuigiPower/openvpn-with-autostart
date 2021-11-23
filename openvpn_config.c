@@ -112,15 +112,15 @@ AddConfigFileToList(int config, const TCHAR *filename, const TCHAR *config_dir)
 #endif
 
     /* Check if connection should be autostarted */
-    for (i = 0; i < MAX_CONFIGS && o.auto_connect[i]; ++i)
-    {
-        if (_tcsicmp(c->config_file, o.auto_connect[i]) == 0
-            || _tcsicmp(c->config_name, o.auto_connect[i]) == 0)
-        {
-            c->auto_connect = true;
-            break;
-        }
-    }
+    // for (i = 0; i < MAX_CONFIGS && o.auto_connect[i]; ++i)
+    // {
+    //     if (_tcsicmp(c->config_file, o.auto_connect[i]) == 0
+    //         || _tcsicmp(c->config_name, o.auto_connect[i]) == 0)
+    //     {
+    c->auto_connect = true;
+    //         break;
+    //     }
+    // }
     /* check whether passwords are saved */
     if (o.disable_save_passwords)
     {
